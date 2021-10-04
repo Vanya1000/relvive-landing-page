@@ -1,1 +1,163 @@
 @import"_nullstyle";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,italic,500,600,700,800&display=swap);
+.wrapper {
+	min-height: 100%;
+	overflow: hidden; //Контент обрезается, без предоставления прокрутки. Для разных отступов.
+	display: flex;
+	flex-direction: column;
+}
+._container {
+	max-width: 1046px;
+	margin: 0 auto;
+	padding: 0px 15px;
+	box-sizing: content-box; //padding не учитавается в размере
+}
+._ibg {
+	position: relative;
+}
+._ibg img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+//-----------------------------header----------------------------------
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+
+		&__container {
+			display: flex;
+			min-height: 104px;
+			align-items: center;
+			@media (max-width: 479px) {
+				min-height: 70px;
+				
+			}
+		}
+
+		&__logo {
+			font-size: 24px;
+			font-weight: 700;
+			color: inherit;
+		}
+
+		&__menu {
+			margin: 0px 0px 0px 133px;
+			@media (max-width: 992px) {
+				margin: 0px 0px 0px 80px;
+				
+			}
+			@media (max-width: 767px) {
+				margin: 0px 0px 0px 40px;
+				
+			}
+			@media (max-width: 479px) {
+				margin: 0px 0px 0px 40px;
+				
+			}
+		}
+}
+
+.menu {
+
+		&_list {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__item:not(:last-child) {
+			margin: 0 21px 0 0;
+		}
+
+		&__link {
+			font-weight: 600;
+			line-height: 24 / 14 * 100%;
+			color: #737373;
+			@media (max-width: 479px) {
+				font-size: 16px;
+				
+			}
+		}
+}
+
+//---------------------------page------------------------------------------
+.page {
+	flex: 1 1 auto;
+		&_main-block {
+		}
+}
+.main-block {
+	position: relative;
+
+		&__container {
+		}
+
+		&__image{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		}
+
+		&__body {
+			padding: 184px 0px 191px 0px;
+			position: relative;
+			z-index: 2;
+			max-width: 509px;
+		}
+		&__body > *:not(:last-child){//ко всем объектам  1 уровня влож внутри body кроме последнего
+			margin: 0px 0px 35px 0px;
+		}
+
+		&__title {
+			font-size: 58px;
+			line-height: 80 / 58 *100%;
+			font-weight: 800;
+			letter-spacing: 0.2px;
+		}
+
+		&__text {
+			color: #737373;
+			font-size: 20px;
+			line-height: 30 / 20 *100%;
+			letter-spacing: 0.2px;
+		}
+
+		&__buttons {
+			display: inline-flex;
+		}
+
+		&__button:not(:last-child) {
+			margin: 0px 10px 0px 0px;
+		}
+		&__button {
+			background: #FF7B47;
+			border-radius: 37px;
+			display: flex;
+			min-height: 48px;
+			justify-content: center;
+			align-items: center;
+			letter-spacing: 0.2px;
+			color: #fff;
+			font-weight: 700;
+			line-height: 150%;
+			padding: 5px 36px;
+			
+
+			&_border {
+				background: none;
+				border: 1px solid #0D5C63;
+				color: #0D5C63;
+			}
+		}
+}
+
+
+//-------------------------footer------------------------------------------
