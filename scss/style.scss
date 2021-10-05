@@ -23,6 +23,26 @@
 	left: 0;
 	object-fit: cover;
 }
+//!________________________________________________________________________________
+.header-block {
+text-align: center;
+		&__title {
+			font-size: 40px;
+			font-weight: bold;
+			line-height: 142%;
+			letter-spacing: 0.2px;
+			&:not(last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+
+		&__sub-title {
+			line-height: 143%;
+			color: #737373;
+			letter-spacing: 0.2px;
+		}
+}
+//!_________________________________________________________________________________
 //-----------------------------header----------------------------------
 .header {
 	position: absolute;
@@ -89,14 +109,11 @@
 //---------------------------page------------------------------------------
 .page {
 	flex: 1 1 auto;
-		&_main-block {
+		&__main-block {
 		}
 }
 .main-block {
 	position: relative;
-
-		&__container {
-		}
 
 		&__image{
 		position: absolute;
@@ -104,13 +121,24 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+		& img {
+			@media (max-width: 1300px) {
+			object-position: right;
+		}
+		@media (max-width: 992px) {
+			opacity: 0.5;
+		}
+		}
 		}
 
 		&__body {
 			padding: 184px 0px 191px 0px;
 			position: relative;
 			z-index: 2;
-			max-width: 509px;
+			max-width: 400px;
+			@media (max-width: 992px) {
+			padding: 120px 0px 191px 0px;
+		}
 		}
 		&__body > *:not(:last-child){//ко всем объектам  1 уровня влож внутри body кроме последнего
 			margin: 0px 0px 35px 0px;
@@ -121,6 +149,9 @@
 			line-height: 80 / 58 *100%;
 			font-weight: 800;
 			letter-spacing: 0.2px;	
+			@media (max-width: 992px) {
+			font-size: 42px;
+		}
 		}
 
 		&__text {
@@ -131,11 +162,13 @@
 		}
 
 		&__buttons {
-			display: inline-flex;
+			display: flex;
+			flex-wrap: wrap;
+			margin: -10px 0px;
 		}
 
 		&__button:not(:last-child) {
-			margin: 0px 10px 0px 0px;
+			margin-right: 10px;
 		}
 		&__button {
 			background: #FF7B47;
@@ -149,6 +182,10 @@
 			font-weight: 700;
 			line-height: 150%;
 			padding: 5px 36px;
+			margin: 10px 0;
+			@media (max-width: 479px) {
+			flex: 1 1 auto;
+		}
 			
 
 			&_border {
@@ -158,6 +195,129 @@
 			}
 		}
 }
+
+//--------------------------services----------------------------------------
+.page {
+
+		&__services {
+			margin: -111px 0px 0px 0px;
+			position: relative;
+			z-index: 2;
+		}
+}
+.services {
+
+		&__body {
+			
+			@media (min-width: 670px) {
+			display: flex;
+			margin: 0px -15px;
+			flex-wrap: wrap;
+			margin-bottom: -30px; //самоуничтожающийся отступ
+			}
+		}
+
+		&__column {
+			
+			flex: 0 1 33.333%;
+			margin-bottom: 30px; //самоуничтожающийся отступ
+			@media (max-width: 992px) {
+			flex: 0 1 50%;
+			
+		}
+		@media (min-width: 670px) {
+			padding: 0px 15px;
+		}
+		
+			
+		}
+		&__column:last-child {
+			@media (max-width: 992px){
+			flex: 1 1 100%;}
+		}
+
+		&__item {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			background-color: #fff;
+			padding: 35px;
+			height: 100%;
+		}
+
+}
+
+.item-service {
+	*:not(:last-child) {
+		margin: 0px 0px 10px 0px;
+	}
+		&__icon {
+		}
+
+		&__title {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 32 / 24 *100%;
+			letter-spacing: 0.1px;
+		}
+
+		&__text {
+			font-weight: 500;
+			line-height: 20 /14 * 100%;
+			color: #737373;
+			letter-spacing: 0.2px;
+		}
+		&_green {
+				background: #0D5C63;
+				.item-service__title {
+					color: white;
+				}
+				.item-service__text {
+					color: #FFFFFF;
+				}
+		}
+}
+//---------------------------------advantages---------------------------
+.page {
+
+		&__advantages {
+			padding: 80px 0px;
+		}
+}
+.advantages {
+	
+
+		&__container {
+		}
+
+		&__header {
+			margin: 0px 0px 50px 0px;
+		}
+
+		&__body {
+			display: flex;
+			margin: 0px -15px;
+		}
+
+		&__column {
+			padding: 0px 15px;
+			flex: 0 1 25%;
+		}
+
+		&__item {
+			background-color: #fff;
+			padding: 30px 40px;
+			text-align: center;
+		}
+
+		&__icon {
+		}
+
+		&__value {
+		}
+
+		&__text {
+		}
+}
+
 
 
 //-------------------------footer------------------------------------------
