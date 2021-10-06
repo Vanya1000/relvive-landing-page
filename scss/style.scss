@@ -280,17 +280,6 @@ text-align: center;
 				.item-service__text {
 					color: #FFFFFF;
 				}
-				position: absolute;
-				animation-name: green-box;
-				animation-duration: 2s;
-				animation-timing-function: linear;
-				animation-iteration-count: 1;
-				animation-direction: reverse;
-				animation-delay: 0s;
-				animation-fill-mode: forwards;
-		}
-		&_green:hover {
-			animation-play-state: paused;
 		}
 }
 @keyframes green-box{
@@ -461,6 +450,151 @@ text-align: center;
 		&__img {
 			display: block;
 			padding: 0px 0px 60% 0px; //138 / 230 = 0.60
+		}
+}
+//--------------------------whoweare---------------------------------------
+.page {
+
+		&__whoweare {
+		}
+}
+.whoweare {
+	padding: 80px 0px 130px 0px;
+	background-color: #fff;
+	@media (max-width: 950px){
+		padding: 50px 0px 50px 0px;
+	}
+		&__container {
+		}
+
+		&__header {
+			margin: 0px 0px 100px 0px;
+			@media (max-width: 950px) {
+				
+			}
+		}
+
+
+		&__body {
+			display: flex;
+			align-items: flex-start;//прижалось к верху
+			@media (max-width: 950px) {
+				flex-direction: column-reverse;
+				align-items: stretch;
+				margin: 0px 0px 50px 0px;
+			}
+		}
+
+		&__video {
+			flex: 0 0 57%;//600 / 1046
+			position: relative;
+			padding: 0px 0px 42.26% 0px; //высчит от ширины боди, так как чет хз.
+			@media (max-width: 950px) {
+				padding: 0px 0px 56.25% 0px;
+			}
+		}
+		&__video iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		} 
+
+		&__content {
+			flex: 1 1 auto;
+			padding: 20px 0px 0px 121px;
+			@media (max-width: 1080px) {
+				padding: 0px 0px 0px 50px;
+			}
+			@media (max-width: 950px) {
+				padding: 0px 0px 0px 0px;
+				margin: 0px 0px 30px 0px;
+			}
+		}
+
+		&__title {
+			font-weight: 800;
+			font-size: 40px;
+			line-height: 142%;
+			letter-spacing: 0.2;
+			@media (max-width: 950px) {
+				font-size: 24px;
+			}
+		}
+
+		&__title:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+
+		&__text {
+			line-height: 142%;
+			color: #737373;
+		}
+
+
+		&__items {
+			padding: 50px 0px 0px 0px;
+		}
+
+		&__item {
+			
+		}
+		&__item:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+}
+
+.item-whoweare {
+	display: flex;
+		&__icon {
+			flex: 0 0 32px;
+		}
+
+		&__body {
+			flex: 1 1 auto;
+			padding: 0px 0px 0px 20px;
+		}
+
+		&__title {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 150%;
+		}
+
+		&__title:not(:last-child) {
+			margin: 0px 0px 5px 0px;
+		}
+
+		&__text {
+			color: #737373;
+			line-height: 171%;
+		}
+}
+//-----------------clients--------------------------------------------------
+.page {
+
+		&__clients {
+		}
+}
+.clients {
+	padding: 50px 0px;
+
+		&__container {
+		}
+
+		&__items {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__item {
+			padding: 8px 13px;
+			flex: 0 1 16.6667%;
+			text-align: center;
 		}
 }
 //-------------------------footer------------------------------------------
