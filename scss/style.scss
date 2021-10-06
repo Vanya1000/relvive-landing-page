@@ -263,6 +263,7 @@ text-align: center;
 			font-weight: bold;
 			line-height: 32 / 24 *100%;
 			letter-spacing: 0.1px;
+			
 		}
 
 		&__text {
@@ -279,7 +280,31 @@ text-align: center;
 				.item-service__text {
 					color: #FFFFFF;
 				}
+				position: absolute;
+				animation-name: green-box;
+				animation-duration: 2s;
+				animation-timing-function: linear;
+				animation-iteration-count: 1;
+				animation-direction: reverse;
+				animation-delay: 0s;
+				animation-fill-mode: forwards;
 		}
+		&_green:hover {
+			animation-play-state: paused;
+		}
+}
+@keyframes green-box{
+	0%{
+		top:0;
+	}
+
+	50%{
+		border-radius: 50%;
+		background-color: #fff;
+	}
+	100%{
+		top: -100px;
+	}
 }
 //---------------------------------advantages---------------------------
 .page {
@@ -362,36 +387,80 @@ text-align: center;
 		}
 }
 .practice {
-
-		&__container {
-		}
+	padding: 125px 0px 80px 0px;
+	@media (max-width: 993px) {
+				padding:40px 0px 80px 0px;
+			}
+	@media (max-width: 767px) {
+				padding:0px 0px 80px 0px;
+			}
 
 		&__header {
+			margin: 0px 0px 45px 0px;
+			
 		}
 
 		&__body {
+			margin: 0px -20px -30px;
+			display: flex;
+			flex-wrap: wrap;
+			
 		}
 
 		&__column {
+			padding: 0px 20px;
+			flex: 0 1 25%;
+			margin: 0px 0px 30px 0px;
+			@media (max-width: 1040px) {
+				flex: 0 1 50%;
+			}
+			@media (max-width: 630px) {
+				flex: 0 1 100%;
+			}
+
 		}
 
 		&__item {
+			
+			
 		}
 }
 
 .item-practice {
+	background-color: #fff;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+		&__content {
+			padding: 30px;
+			flex: 1 1 auto;
+		}
 
 		&__link {
+			display: inline-block;
+			margin: 0px 0px 15px 0px;
+		}
+		&__link:hover {
+			text-decoration: underline;
+			color: inherit;
 		}
 
 		&__title {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 150%;
+			color: #252B42;
+			letter-spacing: 0.1px;
 		}
 
 		&__text {
+			line-height: 143%;
+			color: #737373;
 		}
 
 		&__img {
+			display: block;
+			padding: 0px 0px 60% 0px; //138 / 230 = 0.60
 		}
 }
-
 //-------------------------footer------------------------------------------
