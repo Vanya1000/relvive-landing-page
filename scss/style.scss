@@ -110,6 +110,9 @@ text-align: center;
 				
 			}
 		}
+		&__link:hover {
+			text-decoration: underline;
+		}
 }
 
 //---------------------------page------------------------------------------
@@ -199,6 +202,13 @@ text-align: center;
 				border: 1px solid #0D5C63;
 				color: #0D5C63;
 			}
+		}
+		&__button:first-child:hover {
+			background-color: #773b23;
+			color: white;
+		}
+		&__button:last-child:hover {
+			background-color: rgb(148, 148, 148);
 		}
 }
 
@@ -627,8 +637,8 @@ text-align: center;
 				margin: 0px 30px;
 			}
 		@media (min-width: 810px)  {
-   	 	display: flex;
-			 justify-content: space-between;
+			display: flex;
+			justify-content: space-between;
 		}
 		@media (max-width: 810px) {
 			margin: 0px -15px;
@@ -684,6 +694,10 @@ text-align: center;
 			text-align: center;
 			color: #FFFFFF;
 			padding: 0px 22px;
+			transition: all 0.5s ease 0s;
+		}
+		&__button:hover {
+			background: #864226;
 		}
 }
 //---------------------------getintouch--------------------------------------
@@ -844,7 +858,7 @@ text-align: center;
 		&__top {
 			background: #17213C;
 			color: white;
-			padding: 50px 0px;
+			padding: 35px 0px;
 		}
 
 		&__main {
@@ -853,14 +867,25 @@ text-align: center;
 
 		&__row {
 			display: flex;
+			flex-wrap: wrap;
 			margin: 0px -15px;//отступ безопастности
 		}
 
 		&__column {
-			padding: 0px 15px; //отступ безопастности
-			flex: 0 1 20%;
-			
-			
+			padding: 15px 15px; //отступ безопастности
+			flex: 0 1 16.667%;
+			@media (max-width:992px) {
+				flex: 0 1 25%;
+			}
+			@media (max-width: 700px) {
+				flex: 0 1 50%;
+			}
+		}
+		&__column:last-child {
+			flex: 0 1 33.334%;
+			@media (max-width:992px) {
+				flex: 0 1 100%;
+			}
 		}
 
 		&__label {
@@ -883,16 +908,21 @@ text-align: center;
 		}
 
 		&__container {
-			@media (min-width: 767px) {
-				display: flex;
+			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			@media (max-width: 767px) {
+				flex-direction: column;
 			}
 		}
 
 		&__copy {
 			color: #737373;
 			line-height: 171%;
+			@media (max-width: 767px) {
+				margin: 0px 0px 15px 0px;
+				text-align: center;
+			}
 		}
 
 		&__social {
@@ -937,16 +967,16 @@ text-align: center;
 			}
 			&_phone {
 				color: inherit;
-				background: url(/img/footer_1.svg) left no-repeat;
+				background: url(img/footer_1.svg) left no-repeat;
 			}
 
 			&_map {
 				color: inherit;
-				background: url(/img/footer_2.svg) left no-repeat;
+				background: url(img/footer_2.svg) left no-repeat;
 			}
 
 			&_email {
-				background: url(/img/footer_3.svg) left no-repeat;
+				background: url(img/footer_3.svg) left no-repeat;
 				color: inherit;
 			}
 		}
