@@ -1157,3 +1157,132 @@ h6 {
   background-color: #7a3b21;
   color: white;
 }
+
+.footer__top {
+  background: #17213C;
+  color: white;
+  padding: 50px 0px;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px -15px;
+}
+
+.footer__column {
+  padding: 0px 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+}
+
+.footer__label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.1px;
+  margin: 0px 0px 20px 0px;
+}
+
+.footer__bottom {
+  padding: 25px 0px;
+}
+
+@media (min-width: 767px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer__copy {
+  color: #737373;
+  line-height: 171%;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__social img {
+  vertical-align: top;
+}
+
+.menu-footer__item {
+  line-height: 171%;
+}
+
+.menu-footer__item:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.menu-footer__link {
+  color: inherit;
+}
+
+.menu-footer__link:hover {
+  text-decoration: underline;
+}
+
+.contacts-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-footer__item {
+  padding-left: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 30px;
+}
+
+.contacts-footer__item:not(:last-child) {
+  margin: 0px 0px 12px 0px;
+}
+
+.contacts-footer__item_phone {
+  color: inherit;
+  background: url(/img/footer_1.svg) left no-repeat;
+}
+
+.contacts-footer__item_map {
+  color: inherit;
+  background: url(/img/footer_2.svg) left no-repeat;
+}
+
+.contacts-footer__item_email {
+  background: url(/img/footer_3.svg) left no-repeat;
+  color: inherit;
+}
+
+.contacts-footer__item:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.social__item:not(:last-child) {
+  padding: 0px 20px 0px 0px;
+}
